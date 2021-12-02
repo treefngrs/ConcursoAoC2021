@@ -2,10 +2,10 @@ xs = [(cad, int(d)) for cad,d in map(lambda x: x.split(), open("input.txt").read
 
 hor,dep,dep2=(0,)*3
 for cad, d in xs:
-	if cad == "up":
-		dep-=d
-	elif cad == "down":
+	if cad == "down":
 		dep+=d
+	elif cad == "up":
+		dep-=d
 	elif cad == "forward":
 		hor+=d
 		dep2+=dep*d
