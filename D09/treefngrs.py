@@ -8,6 +8,7 @@ for i in range(100):
 		for x,y in [(i+x2,j+y2) for (x2,y2) in [(1,0),(-1,0),(0,1),(0,-1)]]:
 			if x>=0 and x<100 and y>=0 and y<100 and xs[x][y][0]<=xs[i][j][0]:
 				xs[i][j][1] = False
+				break
 		if xs[i][j][1]:
 			s+=xs[i][j][0]+1
 			basins.append([(i,j)])
