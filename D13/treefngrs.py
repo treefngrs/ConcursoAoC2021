@@ -23,4 +23,4 @@ for a,b in folds:
 		print("Star 1:", sum(sum(row) for row in grid))
 		s1=False
 
-print("Star 2:",*grid,sep='\n')
+print("Star 2:",*[''.join((' ','█')[x] for x in row) for row in grid],sep='\n')
