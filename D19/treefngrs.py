@@ -6,7 +6,6 @@ def rotate(v,i,j,k,a,b,c):
 def manhattan(a,b,c,d,e,f):
 	return abs(a-d)+abs(b-e)+abs(c-f)
 
-
 orientations = [(0,1,2,1,1,1),  (1,2,0,1,1,1),  (2,0,1,1,1,1),  (2,1,0,-1,1,1),  (1,0,2,-1,1,1),  (0,2,1,-1,1,1),
                 (2,1,0,1,-1,1), (1,0,2,1,-1,1), (0,2,1,1,-1,1), (2,1,0,1,1,-1),  (1,0,2,1,1,-1),  (0,2,1,1,1,-1),
                 (0,1,2,-1,1,-1),(1,2,0,-1,1,-1),(2,0,1,-1,1,-1),(0,1,2,1,-1,-1), (1,2,0,1,-1,-1), (2,0,1,1,-1,-1),
@@ -24,7 +23,7 @@ def search(s):
 					return final|s3,True,offset
 	return final,False,None
 
-index = [*range(1,5)]
+index = [*range(1,28)]
 coords = [(0,0,0)]
 for i in index:
 	final,found,offset = search(scanners[i])
